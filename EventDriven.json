@@ -1,0 +1,7 @@
+{
+  "event": "order.created or payment.completed or payment.failed",
+  "data": {
+    "orderId": "uuid",
+    "amount": 150.00
+  }
+}
