@@ -11,6 +11,7 @@ class NewOrderCreator {
     const orderCreated = orderModel.create({
       customerId: data.user,
       items: data.items,
+      valeu: data.value
     });
 
     const event = {
@@ -22,6 +23,7 @@ class NewOrderCreator {
         orderId: orderCreated.id,
         customerId: orderCreated.customerId,
         items: orderCreated.items,
+        value: orderCreated.value
       },
     };
 

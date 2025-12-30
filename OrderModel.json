@@ -4,6 +4,7 @@
   "items": [
     { "productId": "p1", "quantity": 2 }
   ],
+  "value": "90.00",
   "status": "CREATED or PAYMENT_PROCESSING or PAID | FAILED ",
   "createdAt": "2025-01-01T10:00:00Z"
 }
