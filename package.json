@@ -19,6 +19,7 @@
   "homepage": "https://github.com/KauaiStaingel/Ordering_Platform#readme",
   "description": "",
   "dependencies": {
+    "amqplib": "^0.10.9",
     "cors": "^2.8.5",
     "express": "^5.2.1"
   }

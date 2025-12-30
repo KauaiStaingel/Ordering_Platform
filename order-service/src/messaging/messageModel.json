@@ -1,0 +1,13 @@
+{
+  "eventId": "uuid",
+  "eventType": "order.created",
+  "timestamp": "ISO_DATE",
+  "correlationId": "uuid",
+  "data": {
+    "orderId": "uuid",
+    "customerId": "123",
+    "items": [
+      { "productId": "p1", "quantity": 2 }
+    ]
+  }
+}
