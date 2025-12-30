@@ -16,6 +16,7 @@ class newOrderController {
     const data = {
       user: body.userId,
       items: body.items,
+      value: body.value
     };
 
     try {

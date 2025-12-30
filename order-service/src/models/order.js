@@ -5,7 +5,7 @@ class OrderModel {
     this.orders = new Map();
   }
 
-  create({ customerId, items }) {
+  create({ customerId, items, value }) {
     const id = crypto.randomUUID();
     const now = new Date().toISOString();
 
@@ -13,6 +13,7 @@ class OrderModel {
       id,
       customerId,
       items,
+      value,
       status: "CREATED",
       createdAt: now,
       updatedAt: now,
