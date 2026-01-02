@@ -7,5 +7,9 @@ router
 .route('/newOrder')
 .post((req,res)=>newOrderController.newOrder(req,res));
 
+router
+.route('/orders/:id')
+.get((req,res)=>newOrderController.newOrder(req,res));
+
 
 export default router;
