@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import eventBus from "../messaging/eventBus.js";
-import paymentProcessor from "../services/paymentProcessor.js";
+import paymentProcessor from "../service/paymentProcessor.js";
 
 class OrderCreatedConsumer {
   async handle(event) {
