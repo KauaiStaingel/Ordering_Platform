@@ -45,6 +45,30 @@ class EventBus {
   });
 }
 
+async consume(queueName, routingKey, handler) {
+  if (!this.channel) await this.connect();
+
+  await this.channel.assertQueue(queueName, { durable: true });
+  await this.channel.bindQueue(queueName, this.exchange, routingKey);
+
+  await this.channel.consume(queueName, async (msg) => {
+    if (!msg) return;
+
+    try {
+      const raw = msg.content.toString("utf-8");
+      const event = JSON.parse(raw);
+
+      await handler(event, msg);
+
+      this.channel.ack(msg);
+    } catch (err) {
+      console.error("❌ Erro ao processar mensagem:", err);
+      this.channel.nack(msg, false, true); // requeue
+    }
+  });
+}
+
+
 }
 
 export default new EventBus();

@@ -1,5 +1,6 @@
 import express from 'express';
 import newOrderController from '../controllers/newOrderController.js';
+import getOrderController from '../controllers/getOrderController.js';
 
 const router = express.Router();
 
@@ -9,7 +10,7 @@ router
 
 router
 .route('/orders/:id')
-.get((req,res)=>newOrderController.newOrder(req,res));
+.get((req,res)=>getOrderController.newOrder(req,res));
 
 
 export default router;

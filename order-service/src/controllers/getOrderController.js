@@ -12,7 +12,7 @@ class getOrderController {
 
 
     try {
-      const order = await getOrder.createNewOrder(body.id);
+      const order = await getOrder.getOrder(body.id);
 
       return res.status(201).send(order);
     } catch (err) {
