@@ -1,4 +1,4 @@
-import orderModel from "../models/order.js";
+import orderModel from "../db/order.js";
 import eventBus from "../messaging/eventBus.js";
 import crypto from "crypto";
 
@@ -8,10 +8,10 @@ class NewOrderCreator {
       throw new Error("Order must have at least one item");
     }
 
-    const orderCreated = orderModel.create({
+    const orderCreated = await orderModel.create({
       customerId: data.user,
       items: data.items,
-      valeu: data.value
+      value: data.value
     });
 
     const event = {

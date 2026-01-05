@@ -1,4 +1,4 @@
-import orderModel from "../models/order.js";
+import orderModel from "../db/order.js";
 import eventBus from "../messaging/eventBus.js";
 import crypto from "crypto";
 

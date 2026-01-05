@@ -1,4 +1,4 @@
-import orderModel from "../models/order.js";
+import orderModel from "../db/order.js";
 
 class PaymentResultConsumer {
   async handle(event) {
